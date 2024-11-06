@@ -58,7 +58,7 @@ const Modal: React.FC<ModalProps> = ({
   return (
     <>
       <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-neutral-800/70">
-        <div className="relative w-full max-w-md y-12 mx-auto bg-white rounded-lg shadow-lg">
+        <div className="relative w-full max-w-xl y-12 mx-auto bg-white rounded-lg shadow-lg">
           {/* content */}
           <div
             className={`transform duration-300 ${
