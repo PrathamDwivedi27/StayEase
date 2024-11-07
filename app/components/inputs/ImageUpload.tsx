@@ -1,7 +1,11 @@
 "use client"
 import React from 'react'
 
-import {CldUploadWidget} from "next-cloudinary"
+import dynamic from 'next/dynamic';
+
+// Import CldUploadWidget dynamically with SSR disabled
+const CldUploadWidget = dynamic(() => import("next-cloudinary").then((mod) => mod.CldUploadWidget), { ssr: false });
+
 import Image from 'next/image'
 import { useCallback } from 'react'
 import { TbPhotoPlus } from 'react-icons/tb'
@@ -22,7 +26,7 @@ const ImageUpload:React.FC<ImageUploadProps> = ({
 
   const handleUpload = useCallback((result: any) => {
     console.log('Cloudinary Upload Result:', result);
-    if (result?.event === 'upload-complete' && result?.info?.secure_url) {
+    if (result.event === 'success' && result.info.secure_url) {
       onChange(result.info.secure_url);  // Get the final secure URL
     }
   }, [onChange]);
@@ -31,7 +35,7 @@ const ImageUpload:React.FC<ImageUploadProps> = ({
   
   return (
     <CldUploadWidget
-      onUpload={handleUpload}
+    onSuccess={handleUpload}
       uploadPreset='g9qm1kv7'
       options={{
         maxFiles:1,
