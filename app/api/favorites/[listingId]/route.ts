@@ -4,7 +4,7 @@ import prisma from "@/app/libs/prismadb";
 
 export async function POST(
     request: Request,
-    { params }: { params: { listingId?: string } }
+    { params }: { params: { listingId: string } }
 ) {
     const currentUser = await getCurrentUser();
     if (!currentUser) {
