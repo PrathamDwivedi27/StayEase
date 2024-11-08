@@ -8,20 +8,19 @@ interface IParams {
 
 export async function POST(
     request: Request,
-    { params }: { params: IParams }
+    context: { params: IParams }
 ) {
     const currentUser = await getCurrentUser();
     if (!currentUser) {
         return NextResponse.error();
     }
 
-    const { listingId } = params;
+    const { listingId } = context.params;
     if (!listingId || typeof listingId !== "string") {
         throw new Error("Invalid listingId");
     }
 
-    const favoriteIds = [...(currentUser.favoriteIds || [])];
-    favoriteIds.push(listingId);
+    const favoriteIds = [...(currentUser.favoriteIds || []), listingId];
 
     const user = await prisma.user.update({
         where: {
@@ -37,14 +36,14 @@ export async function POST(
 
 export async function DELETE(
     request: Request,
-    { params }: { params: IParams }
+    context: { params: IParams }
 ) {
     const currentUser = await getCurrentUser();
     if (!currentUser) {
         return NextResponse.error();
     }
 
-    const { listingId } = params;
+    const { listingId } = context.params;
     if (!listingId || typeof listingId !== "string") {
         throw new Error("Invalid listingId");
     }
