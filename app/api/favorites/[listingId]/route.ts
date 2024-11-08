@@ -2,20 +2,16 @@ import { NextResponse } from "next/server";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import prisma from "@/app/libs/prismadb";
 
-interface IParams {
-    listingId?: string;
-}
-
 export async function POST(
     request: Request,
-    context: { params: IParams }
+    { params }: { params: { listingId?: string } }
 ) {
     const currentUser = await getCurrentUser();
     if (!currentUser) {
         return NextResponse.error();
     }
 
-    const { listingId } = context.params;
+    const { listingId } = params;
     if (!listingId || typeof listingId !== "string") {
         throw new Error("Invalid listingId");
     }
@@ -36,14 +32,14 @@ export async function POST(
 
 export async function DELETE(
     request: Request,
-    context: { params: IParams }
+    { params }: { params: { listingId?: string } }
 ) {
     const currentUser = await getCurrentUser();
     if (!currentUser) {
         return NextResponse.error();
     }
 
-    const { listingId } = context.params;
+    const { listingId } = params;
     if (!listingId || typeof listingId !== "string") {
         throw new Error("Invalid listingId");
     }
