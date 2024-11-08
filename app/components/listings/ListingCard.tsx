@@ -64,19 +64,19 @@ const ListingCard:React.FC<ListingCardProps> = ({
     >
         <div className='flex flex-col gap-2 w-full'>
             <div
-                className='aspect-square w-full relative overflow-hidden rounded-xl'
+                className='aspect-square w-full  relative overflow-hidden rounded-xl'
             >
                 <Image
                     fill
                     alt='Listing'
                     src={data.imageSrc}
-                    className='
+                    className="
                         object-cover
                         h-full
-                        w-full
+                        w-[200%]
                         group-hover:scale-110
                         transition
-                    '
+                    "
                 />
                 <div className='absolute top-3 right-3'>
                     <HeartButton
@@ -89,7 +89,7 @@ const ListingCard:React.FC<ListingCardProps> = ({
             <div className='font-semibold text-lg'>
                 {location?.region}, {location?.label}
             </div>
-            <div className='font-light text-neutral-500'>
+            <div className='font-light text-neutral-500 whitespace-nowrap'>
                 {reservationDate || data.category}
             </div>
             <div className='flex flex-row items-center gap-1'>

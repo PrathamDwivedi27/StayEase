@@ -73,7 +73,7 @@ const ListingClient :React.FC<ListingClientProps>= ({
             setDateRange(initialDateRange);
 
             //redirect to reservations page
-            router.refresh();
+            router.push('/trips');
         })
         .catch(()=>{
             toast.error('Failed to create reservation');
