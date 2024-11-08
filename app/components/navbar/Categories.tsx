@@ -31,7 +31,7 @@ export const categories=[
     {
         label:'CountrySide',
         icon:TbMountain,
-        description:'This property is countryside!'
+        description:'This property is in countryside!'
     },
     {
         label:'Pools',
