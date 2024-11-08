@@ -4,14 +4,14 @@ import prisma from "@/app/libs/prismadb";
 
 export async function POST(
     request: Request,
-    { params }: { params: { listingId: string } }
+    context: Record<string, never> // Use `Record<string, any>` for flexible typing
 ) {
     const currentUser = await getCurrentUser();
     if (!currentUser) {
         return NextResponse.error();
     }
 
-    const { listingId } = params;
+    const { listingId } = context.params;
     if (!listingId || typeof listingId !== "string") {
         throw new Error("Invalid listingId");
     }
@@ -32,14 +32,14 @@ export async function POST(
 
 export async function DELETE(
     request: Request,
-    { params }: { params: { listingId?: string } }
+    context: Record<string, never> // Use `Record<string, any>` for flexible typing
 ) {
     const currentUser = await getCurrentUser();
     if (!currentUser) {
         return NextResponse.error();
     }
 
-    const { listingId } = params;
+    const { listingId } = context.params;
     if (!listingId || typeof listingId !== "string") {
         throw new Error("Invalid listingId");
     }
