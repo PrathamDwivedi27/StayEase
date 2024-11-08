@@ -45,7 +45,7 @@ const useFavorite=({listingId,currentUser}:FavoriteProps)=>{
             router.refresh();
             toast.success("Favorite updated");
             
-        } catch (error) {
+        } catch {
             toast.error("Failed to update favorite");
         }
     },[currentUser,hasFavorited,listingId,loginModal,router]);

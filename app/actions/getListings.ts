@@ -26,7 +26,7 @@ export default async function getListings(
             category,
         }= await params;
 
-        let query:any={};
+        const query: { [key: string]: string | number | object } = {};
 
         if(userId){
             query.userId=userId;

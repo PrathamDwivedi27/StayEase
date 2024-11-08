@@ -22,7 +22,7 @@ export async function POST(
         guestCount,
         bathroomCount
     }=body;
-    Object.keys(body).forEach((value:any)=>{
+    Object.keys(body).forEach((value: string) => {
         if(!body[value]){
             NextResponse.error();
         }

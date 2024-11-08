@@ -10,7 +10,7 @@ export default async function getReservations(params:IParams) {
     try {
         const { listingId, userId, authorId } = params;
     
-    const query: any={};
+    const query: { listingId?: string; userId?: string; authorId?: string } = {};
 
     //if we give listing id then we will get all reservations for that listing
     if (listingId) {
@@ -37,9 +37,14 @@ export default async function getReservations(params:IParams) {
         }
     });
     return reservations;
-    } catch (error:any) {
-        console.log("Error in getReservations",error.message);
-        throw new Error(error.message);    
+    } catch (error: unknown) {
+        if (error instanceof Error) {
+            console.log("Error in getReservations", error.message);
+            throw new Error(error.message);
+        } else {
+            console.log("Error in getReservations", error);
+            throw new Error("An unknown error occurred");
+        }
     }
     
 }
