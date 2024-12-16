@@ -2,14 +2,13 @@ import { NextResponse } from "next/server";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import prisma from "@/app/libs/prismadb";
 
-export async function POST(request: Request) {
+export async function POST(request: Request, { params }: { params: { listingId: string } }) {
     const currentUser = await getCurrentUser();
     if (!currentUser) {
         return NextResponse.error();
     }
 
-    const url = new URL(request.url); // Create a URL object from the request URL
-    const listingId = url.searchParams.get('listingId'); 
+    const { listingId } = params; // Extract from route params
     if (!listingId || typeof listingId !== "string") {
         throw new Error("Invalid listingId");
     }
@@ -28,14 +27,13 @@ export async function POST(request: Request) {
     return NextResponse.json(user);
 }
 
-export async function DELETE(request: Request) {
+export async function DELETE(request: Request, { params }: { params: { listingId: string } }) {
     const currentUser = await getCurrentUser();
     if (!currentUser) {
         return NextResponse.error();
     }
 
-    const url = new URL(request.url); // Create a URL object from the request URL
-    const listingId = url.searchParams.get('listingId'); 
+    const { listingId } = params; // Extract from route params
     if (!listingId || typeof listingId !== "string") {
         throw new Error("Invalid listingId");
     }
