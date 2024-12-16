@@ -1,6 +1,6 @@
-# StayEase
+# StayEase: A website where you can list your properties for rent and earn money
 
-StayEase is an Airbnb clone that allows users to list their homes or find the perfect place to stay. Users can specify property types, search using filters, and make reservations with an intuitive and visually appealing calendar UI.
+StayEase is a platform for seamless home sharing and vacation rentals. Users can list properties, explore diverse accommodations, and book stays effortlessly with advanced filters and an intuitive calendar interface, making travel planning easy and enjoyable.
 
 ## Demo Video
 
