@@ -2,14 +2,13 @@ import getCurrentUser from "@/app/actions/getCurrentUser";
 import prisma from "@/app/libs/prismadb";
 import { NextResponse } from "next/server";
 
-export async function DELETE(request: Request) {
+export async function DELETE(request: Request,{ params }: { params: { listingId: string } }) {
     const currentUser = await getCurrentUser();
     if (!currentUser) {
         throw new Error('Not authenticated');
     }
 
-    const url = new URL(request.url); // Create URL object from the request URL
-    const listingId = url.searchParams.get('listingId');  // Get listingId from URL
+    const { listingId } = params; // Get listingId from URL
     if (!listingId || typeof listingId !== "string") {
         throw new Error('Invalid reservation ID');
     }

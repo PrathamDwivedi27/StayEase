@@ -1,37 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# StayEase
 
-## Getting Started
+StayEase is an Airbnb clone that allows users to list their homes or find the perfect place to stay. Users can specify property types, search using filters, and make reservations with an intuitive and visually appealing calendar UI.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 🌟 Core Functionalities
+1. **List Your Home**:
+   - Choose the type of place (e.g., beach, lake, castle, near winter, etc.).
+   - Specify details like guest count, bathroom count, room count.
+   - Add a title, description, and price for your property.
+   - Upload property images using Cloudinary.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Search and Filter**:
+   - Search properties using multiple criteria like location, guest count, rooms, bathrooms, and calendar dates.
+   - Explore properties visually with an interactive map powered by Leaflet.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Reservations**:
+   - Book properties through a calendar UI where already booked dates are disabled.
+   - Favorite properties for easy access later.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. **View and Manage**:
+   - View all your listed properties and their respective reservations.
+   - Manage your reservations and availability with ease.
 
-## Learn More
+### 🔑 Authentication
+- Secure user authentication with Google and GitHub using `next-auth`.
 
-To learn more about Next.js, take a look at the following resources:
+### 💾 Tech Stack
+- **Frontend**: Next.js
+- **Maps**: Leaflet (via React-Leaflet)
+- **Calendar UI**: `react-date`
+- **Image Storage**: Cloudinary
+- **Database**: MongoDB
+- **Authentication**: NextAuth (Google and GitHub)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Walkthrough
 
-## Deploy on Vercel
+### Dashboard
+![Dashboard](link-to-your-dashboard-image)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Search
+![Search](link-to-your-search-image)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-"# StayEase" 
+### Favorite Properties
+![Favorites](link-to-your-favorites-image)
+
+### Listing Properties
+![Listing](link-to-your-listing-image)
+
+### Reservations
+![Reservations](link-to-your-reservations-image)
+
+---
+
+## Demo Video
+
+Watch a quick walkthrough of the project:
+
+[![StayEase Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
