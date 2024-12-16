@@ -66,4 +66,4 @@ StayEase is an Airbnb clone that allows users to list their homes or find the pe
 
 Watch a quick walkthrough of the project:
 
-[![StayEase Demo](https://img.youtube.com/vi/ScUenENFpRE/maxresdefault.jpg)](https://www.youtube.com/watch?v=ScUenENFpRE)
+[![StayEase Demo](/images//Screenshot%202024-12-16%20195800.png)](https://www.youtube.com/watch?v=ScUenENFpRE)
