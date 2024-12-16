@@ -39,19 +39,26 @@ StayEase is an Airbnb clone that allows users to list their homes or find the pe
 ## Project Walkthrough
 
 ### Dashboard
-![Dashboard](link-to-your-dashboard-image)
+![Dashboard](/images/Screenshot%202024-12-16%20195800.png)
 
 ### Search
-![Search](link-to-your-search-image)
+![Search](/images/Screenshot%202024-12-16%20195824.png)
+![Search](/images/Screenshot%202024-12-16%20195856.png)
+![Search](/images/Screenshot%202024-12-16%20195909.png)
+![Search](/images/Screenshot%202024-12-16%20195920.png)
 
 ### Favorite Properties
-![Favorites](link-to-your-favorites-image)
+![Favorites](/images/Screenshot%202024-12-16%20195954.png)
 
 ### Listing Properties
-![Listing](link-to-your-listing-image)
+![Listing](/images/Screenshot%202024-12-16%20200130.png)
+![Listing](/images/Screenshot%202024-12-16%20200145.png)
+![Listing](/images/Screenshot%202024-12-16%20200156.png)
+![Listing](/images/Screenshot%202024-12-16%20200225.png)
+
 
 ### Reservations
-![Reservations](link-to-your-reservations-image)
+![Reservations](/images/Screenshot%202024-12-16%20200035.png)
 
 ---
 
@@ -59,4 +66,4 @@ StayEase is an Airbnb clone that allows users to list their homes or find the pe
 
 Watch a quick walkthrough of the project:
 
-[![StayEase Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![StayEase Demo](https://img.youtube.com/vi/ScUenENFpRE/maxresdefault.jpg)](https://www.youtube.com/watch?v=ScUenENFpRE)
